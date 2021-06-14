@@ -124,12 +124,17 @@ public class SimpleMatchingEngine {
         }
 
         books.forEach( (id, book) -> {
-            book.showBook();
-            book.showTrades();
+
+            //to see order book in console
+            //book.showBook();
+
+            //to see trades in console
+            //book.showTrades();
             book.bookToFile(id+"_OrderBook.txt");
             book.toFile(id + "_Errors.txt", book.errors);
             book.tradesToFile(id+"_Trades.txt", book.trades);
 
+            //to see errors in console
             //book.showErrors();
         });
 
