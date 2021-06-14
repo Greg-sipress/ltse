@@ -6,11 +6,6 @@ import java.io.*;
 public class OrderBook {
 
 
-    //String symbol;
-    //HashMap<String, ArrayList<TradeOrder>> buyBook;
-    //TreeMap<String, ArrayList<TradeOrder>> buyBook;
-    //TreeMap<String, ArrayList<TradeOrder>> sellBook;
-
     TreeMap<String, PriorityQueue<TradeOrder>> buyBook;
     TreeMap<String, PriorityQueue<TradeOrder>> sellBook;
 
@@ -23,13 +18,13 @@ public class OrderBook {
 
     public OrderBook() {
 
-        //this.symbol = sym;
+
         buyBook = new TreeMap<>(new Comparator<String>()
         {
             public int compare(String o1, String o2)
             {
                 return new Double(o2).compareTo(new Double(o1));
-                //return o1.compareTo(o2);
+
             }
         });
         ;
@@ -38,7 +33,7 @@ public class OrderBook {
             public int compare(String o1, String o2)
             {
                 return new Double(o1).compareTo(new Double(o2));
-                //return o1.compareTo(o2);
+
             }
         });
 
@@ -55,7 +50,7 @@ public class OrderBook {
             processLimitOrder(to);
         }
 
-        //showBook();
+
 
 
     }

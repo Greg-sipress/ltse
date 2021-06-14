@@ -6,9 +6,7 @@ import java.util.*;
 
 public class SimpleMatchingEngine {
 
-    //HashMap validMap = new HashMap<String, Boolean>;
     Set validSet;
-
 
     HashMap <String, OrderBook> books;
 
@@ -68,11 +66,7 @@ public class SimpleMatchingEngine {
                 catch(Exception e) {
                     e.printStackTrace();
                 }
-               /* for(String token : nextLine)
-                {
-                    System.out.print(token);
-                }
-                System.out.print("\n");*/
+
             }
 
         }
